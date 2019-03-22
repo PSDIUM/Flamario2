@@ -4306,6 +4306,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2910648304024487385, guid: 04c66d3a4e11c4dfe8754816ad271bba,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4985038389095078592, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}

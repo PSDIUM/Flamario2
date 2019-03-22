@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool grounded;
 
     public float jumpForce = 5; //Force applied to player vertically
-    public float jumpTime = 5; //How long a jump will last
+    public float jumpTime = 5; //Maximum jump time
     public Transform groundCheck;     //Where to check for ground
 
     private float input;
@@ -39,18 +39,19 @@ public class PlayerController : MonoBehaviour
             FlipPlayer();
         }
 
-        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground")); // check if mario is grounded
+
         if (grounded)
         {
-            jumpTimer = 0;
+            jumpTimer = 0;  //if mario is grounded, reset jump timer
         }
 
         if (Input.GetButton("Jump"))    //Jumping
         {
             jumpTimer = jumpTimer + Time.deltaTime;
-            if (jumpTimer <= jumpTime)
+            if (jumpTimer <= jumpTime)  //if the jump timer (jumpTimer) is less than the maximum jump time (jumpTime)
             {
-                player.AddForce(transform.up * jumpForce);
+                player.AddForce(transform.up * jumpForce);  //add force upwards
                 Debug.Log("junp");
             }
         }
