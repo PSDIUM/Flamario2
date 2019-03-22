@@ -39,11 +39,29 @@ public class PlayerController : MonoBehaviour
             FlipPlayer();
         }
 
-        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground")); // check if mario is grounded
+        grounded = Physics2D.Raycast(transform.position, transform.TransformDirection (Vector3.down), 1, 1<<8);
+        
+        /* 
+        // Raycast testing modified from https://docs.unity3d.com/ScriptReference/Physics.Raycast.html
+        if (Physics2D.Raycast(transform.position, transform.TransformDirection (Vector3.down), 1, 1<<8)) 
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection (Vector3.down) * 1, Color.yellow);
+            Debug.Log("Did Hit");
+        } 
+        else 
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection (Vector3.down) *1, Color.white);
+            Debug.Log("Did not Hit");
+        }
+        // 
+        */
 
         if (grounded)
         {
+            Debug.Log("grounded");
             jumpTimer = 0;  //if mario is grounded, reset jump timer
+        } else {
+            Debug.Log("Not Grounded");
         }
 
         if (Input.GetButton("Jump"))    //Jumping
