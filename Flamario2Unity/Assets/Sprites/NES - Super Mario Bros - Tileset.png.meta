@@ -5,6 +5,11 @@ TextureImporter:
     21300000: GroundBlock
     21300002: Block
     21300004: SingleCloud
+    21300006: PipeHead
+    21300008: PipeExtra
+    21300010: PipeTets
+    21300012: Pipe
+    21300014: Pipe
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -135,13 +140,61 @@ TextureImporter:
         width: 48
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 554b9a37d4b377e4f86b9abc7da5651a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PipeHead
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 304
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: -7}
+        - {x: 14, y: -8}
+        - {x: -14, y: -8}
+        - {x: -14, y: -7}
+        - {x: -16, y: -7}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+        - {x: 16, y: -7}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2aaa1efdaa3ad4f867bcfc609beab3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipe
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 292
+        width: 28
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b51c84b14624845a6d9814572c4d4d
       vertices: []
       indices: 
       edges: []
