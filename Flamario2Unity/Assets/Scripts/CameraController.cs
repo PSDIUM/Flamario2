@@ -14,15 +14,16 @@ public class CameraController : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
-        offset = transform.position - target.transform.position;
+        
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        //transform.position = target.transform.position + offset;
         float targetX = Mathf.Max(leftBorderX, Mathf.Min(rightBorderX, target.transform.position.x));
-        float x = Mathf.SmoothDamp(transform.position.x, targetX, ref smoothDampVel, smoothDampTime);
-        transform.position = new Vector3(x, transform.position.y, transform.position.z);
+        if(targetX > transform.position.x) {
+            float x = Mathf.SmoothDamp(transform.position.x, targetX, ref smoothDampVel, smoothDampTime);
+            transform.position = new Vector3(x, transform.position.y, transform.position.z);
+        } 
     }
 }
