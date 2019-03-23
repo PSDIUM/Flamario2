@@ -1,10 +1,14 @@
 fileFormatVersion: 2
-guid: 34f71ae55c1fa458a8006181dd477eab
+guid: f734981f78f2a0446be7414bd861d56c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: GroundBlock
-    21300002: Block
-    21300004: SingleCloud
+    21300000: MarioStand
+    21300002: MarioWalk 1
+    21300004: MarioWalk2
+    21300006: MarioWalk3
+    21300008: MarioSkid
+    21300010: MarioJump
+    21300012: MarioDuck
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -48,12 +52,12 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 80, y: 654, z: 351, w: 1}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -87,13 +91,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GroundBlock
+      name: MarioStand
       rect:
         serializedVersion: 2
-        x: 0
-        y: 432
+        x: 80
+        y: 654
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,38 +105,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd639963d8d89490cb3291ec0141976e
+      spriteID: 19c5c7008969dbd4c8d6d31791beb87d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Block
+      name: MarioWalk 1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 416
+        x: 97
+        y: 654
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d862eabbe7006e441b8fc87282366b7c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SingleCloud
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 48
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -141,7 +125,107 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 554b9a37d4b377e4f86b9abc7da5651a
+      spriteID: 44f74125ebfc188478fad3ba68016805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarioWalk2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 654
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5526feac0931b1c49b8c6466d02d6c14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarioWalk3
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 654
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0bb30d4ee72b834a8de8aecfb4d24f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarioSkid
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 654
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061481b052cd5ba4caa34042e1c9af5b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarioJump
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 654
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9f887d5e5953b47afd4c731a460241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarioDuck
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 654
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e93c0c562721140a4c93c9dc56346b
       vertices: []
       indices: 
       edges: []
@@ -149,7 +233,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c0fbe7a7b58884ed894ef3ca1b5ed38b
+    spriteID: 6f712918d71d1a042a17a4bfe6a67887
     vertices: []
     indices: 
     edges: []
