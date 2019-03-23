@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-	public LayerMask collisionLayer;
+
+    // Ignore all layers except #9
+	private int collisionLayer = 1<<9;
 	private float speed = 10;
 
 	void FixedUpdate() {
@@ -12,24 +14,20 @@ public class PlayerController : MonoBehaviour {
 
 	private void Movement() {
 		float hInput = Input.GetAxis("Horizontal");
-		Vector3 horizontalMovement = new Vector3();
-
 		if (hInput != 0) {
-			if (IsColliding(hInput))
+			if (IsColliding(hInput)){
 				return;
-
-			horizontalMovement += new Vector3(hInput * speed * Time.deltaTime, 0, 0);
+            }
+			transform.position += new Vector3(hInput * speed * Time.deltaTime, 0, 0);
 		}
+    }
 
-		transform.position += horizontalMovement;
-	}
-
-	private bool IsColliding(float input) {
+    private bool IsColliding(float input) {
 		Vector3 dir = input < 0 ? Vector3.left : Vector3.right;
-		Vector3 origin = transform.position + (dir * 0.5f);
+		Vector3 origin = transform.position;
 
-		RaycastHit2D hit = Physics2D.Raycast(origin, dir, 0.3f * speed * Time.deltaTime, collisionLayer);
-		Debug.DrawRay(origin, dir * 0.3f * speed * Time.deltaTime, Color.yellow);
+		RaycastHit2D hit = Physics2D.Raycast(origin, dir, transform.lossyScale.x/2, collisionLayer);
+		//Debug.DrawRay(origin, dir * transform.lossyScale.x/2, Color.yellow);
 		return hit.collider != null;
-	}
+    }
 }
