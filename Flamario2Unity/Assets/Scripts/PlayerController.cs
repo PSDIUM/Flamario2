@@ -1,10 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
-{
-    
+public class PlayerController : MonoBehaviour {
+    public LayerMask collisionLayer = 1<<8;
+	  private float speed = 10;
+  
     void Update() {
         Movement();
     }
@@ -23,7 +24,7 @@ public class PlayerController : MonoBehaviour
 		Vector3 dir = input < 0 ? Vector3.left : Vector3.right;
 		Vector3 origin = transform.position;
 
-		RaycastHit2D hit = Physics2D.Raycast(origin, dir, transform.lossyScale.x/2, 1<<8);
+		RaycastHit2D hit = Physics2D.Raycast(origin, dir, transform.lossyScale.x/2, collisionLayer);
 		//Debug.DrawRay(origin, dir * transform.lossyScale.x/2, Color.yellow);
 		return hit.collider != null;
     }
