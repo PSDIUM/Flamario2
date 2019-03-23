@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-    public LayerMask collisionLayer = 1<<8;
-	  private float speed = 10;
+    private int collisionLayer = 1<<9;
+	private float speed = 10;
   
     void Update() {
         Movement();
