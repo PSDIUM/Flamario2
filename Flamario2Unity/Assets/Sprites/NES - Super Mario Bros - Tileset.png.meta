@@ -132,26 +132,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SingleCloud
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 48
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 554b9a37d4b377e4f86b9abc7da5651a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PipeHead
       rect:
         serializedVersion: 2

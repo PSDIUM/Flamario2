@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 6082189539394387897}
   - component: {fileID: 7621820613168946269}
   - component: {fileID: 4316708828020799549}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MediumPipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}

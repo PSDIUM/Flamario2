@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 2836583109589427010}
   - component: {fileID: 1942163119932358822}
   - component: {fileID: 5250583262253376710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TallPipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
