@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour {
 	private void Run() {
 		float hInput = Input.GetAxis("Horizontal");
 		if (hInput != 0) {
+            gameObject.GetComponent<Animator>().SetBool("Moving", true);
 			float velocity = hInput * speed * Time.deltaTime;
 			Vector2 dir = hInput < 0 ? Vector3.left : Vector3.right;
             if(dir == Vector2.left && gameObject.GetComponent<SpriteRenderer>().flipX == false) {
@@ -68,7 +69,9 @@ public class PlayerController : MonoBehaviour {
 			}
 
 			transform.position += new Vector3(velocity, 0, 0);
-		}
+		} else {
+            gameObject.GetComponent<Animator>().SetBool("Moving", false);
+        }
 	}
 
 	private void Jump() {
@@ -80,6 +83,7 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 		if (playerState == PlayerStates.JUMPING) {
+            gameObject.GetComponent<Animator>().SetBool("Jumping", true);
 			if (!GetCollision(Vector2.up)) {
 				RaycastHit2D ray = GetRaycast(Vector2.up);
 				if (ray.collider != null) {
@@ -87,7 +91,9 @@ public class PlayerController : MonoBehaviour {
 					SetCollisions(Vector2.up, true);
 				}
 			}
-		}
+		} else {
+            gameObject.GetComponent<Animator>().SetBool("Jumping", false);
+        }
 	}
 
 	private void Fall() {
