@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameController : MonoBehaviour {
 
     public GameObject menuPanal, menuCursor, levelPanel, gameoverPanel, blackCoverPanel, player;
-    public TextMeshProUGUI scoreText, coinsText, timeNumText;
+    public TextMeshProUGUI topScoreText, scoreText, coinsText, timeNumText;
 
     private float timeNumValue, scoreValue;
     private Vector3 player1LocalPos = new Vector3(-315, -152); // Worldspace (-2.8F, 4.2F, -0.3F)
@@ -19,10 +20,10 @@ public class GameController : MonoBehaviour {
     {
         // Lock and hide the cursor
         //SetCursorState(CursorLockMode.Locked);
+        topScoreText.text = "Top- " + PlayerPrefs.GetFloat("TopScore").ToString("000000");
         menuPanal.SetActive(true);
         PlayerPrefs.SetInt("InMenu", 1);
         timeNumValue = 400;
-        PlayerPrefs.SetInt("FlagBase", 0);
         timer = Timer();
     }
 
@@ -39,11 +40,14 @@ public class GameController : MonoBehaviour {
                 StartCoroutine(StartGame());
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
+        // Resets top score
+        if (Input.GetKeyDown(KeyCode.Y)) {
+            PlayerPrefs.SetFloat("TopScore", 000000);
+            topScoreText.text = "Top- " + PlayerPrefs.GetFloat("TopScore").ToString("000000");
+        }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             QuitGame();
         }
-        Debug.Log(player.transform.position.y);
     }
 
     public IEnumerator StartGame() {
@@ -91,6 +95,11 @@ public class GameController : MonoBehaviour {
             scoreText.text = "Mario\n" + scoreValue.ToString("000000");
             yield return null;
         }
+        yield return new WaitForSeconds(2);
+        blackCoverPanel.SetActive(true);
+        yield return new WaitForSeconds(1);
+        PlayerPrefs.SetFloat("TopScore", scoreValue);
+        SceneManager.LoadScene(0);
     }
 
     public void SetCursorState(CursorLockMode wantedMode) {

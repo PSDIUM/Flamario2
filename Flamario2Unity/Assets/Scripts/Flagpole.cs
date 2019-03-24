@@ -19,7 +19,6 @@ public class Flagpole : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        PlayerPrefs.SetInt("FlagBase", 0);
         StartCoroutine(gameController.GetComponent<GameController>().FinishFlag());
     }
 }
