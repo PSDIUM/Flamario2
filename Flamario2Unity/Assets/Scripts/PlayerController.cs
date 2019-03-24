@@ -48,6 +48,11 @@ public class PlayerController : MonoBehaviour {
 		if (hInput != 0) {
 			float velocity = hInput * speed * Time.deltaTime;
 			Vector2 dir = hInput < 0 ? Vector3.left : Vector3.right;
+            if(dir == Vector2.left && gameObject.GetComponent<SpriteRenderer>().flipX == false) {
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            } else if(dir == Vector2.right && gameObject.GetComponent<SpriteRenderer>().flipX == true) {
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            }
 
 			RaycastHit2D ray = GetRaycast(dir);
 
