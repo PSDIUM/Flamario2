@@ -7,10 +7,10 @@ public class PlayerController : MonoBehaviour {
 	private PlayerStates playerState;
 
 	private Collisions[] collisions;
-	private float speed = 10;
-	private float jumpSpeed = 15;
+	[SerializeField] private float speed = 10;
+	[SerializeField] private float jumpSpeed = 15;
 	private float jumpVelocity = 0;
-	private float gravity = 20;
+	[SerializeField] private float gravity = 20;
 
 	private void Start() {
 		playerState = PlayerStates.IDLE;
