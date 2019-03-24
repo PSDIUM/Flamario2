@@ -4,6 +4,7 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: CoinIcon
     21300002: GameOver
+    21300004: Cross
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -162,13 +163,69 @@ TextureImporter:
         width: 71
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 690e82550ef905f49afc047061358117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 232
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.5, y: -2.5}
+        - {x: -2.5, y: -1.5}
+        - {x: -1.5, y: -1.5}
+        - {x: -1.5, y: -2.5}
+      - - {x: -1.5, y: -1.5}
+        - {x: -1.5, y: -0.5}
+        - {x: -0.5, y: -0.5}
+        - {x: -0.5, y: -1.5}
+      - - {x: 0.5, y: -1.5}
+        - {x: 0.5, y: -0.5}
+        - {x: 1.5, y: -0.5}
+        - {x: 1.5, y: -1.5}
+      - - {x: 1.5, y: -2.5}
+        - {x: 1.5, y: -1.5}
+        - {x: 2.5, y: -1.5}
+        - {x: 2.5, y: -2.5}
+      - - {x: 1.5, y: 1.5}
+        - {x: 1.5, y: 2.5}
+        - {x: 2.5, y: 2.5}
+        - {x: 2.5, y: 1.5}
+      - - {x: 0.5, y: 0.5}
+        - {x: 0.5, y: 1.5}
+        - {x: 1.5, y: 1.5}
+        - {x: 1.5, y: 0.5}
+      - - {x: -0.5, y: -0.5}
+        - {x: -0.5, y: 0.5}
+        - {x: 0.5, y: 0.5}
+        - {x: 0.5, y: -0.5}
+      - - {x: -1.5, y: 0.5}
+        - {x: -1.5, y: 1.5}
+        - {x: -0.5, y: 1.5}
+        - {x: -0.5, y: 0.5}
+      - - {x: -2.5, y: 1.5}
+        - {x: -2.5, y: 2.5}
+        - {x: -1.5, y: 2.5}
+        - {x: -1.5, y: 1.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f6adb7c733c924c8f64573d8dc26ad
       vertices: []
       indices: 
       edges: []

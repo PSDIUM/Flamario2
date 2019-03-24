@@ -30,10 +30,11 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void Movement() {
-		Run();
-		Jump();
-		Fall();
-
+        if(PlayerPrefs.GetInt("InMenu") == 0) {
+            Run();
+		    Jump();
+		    Fall();
+        }
 	}
 
 	private void CheckCollision() {
