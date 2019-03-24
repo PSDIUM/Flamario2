@@ -3,6 +3,7 @@ guid: 8c9b2be099b313d4da6ba10890f11ac2
 TextureImporter:
   fileIDToRecycleName:
     21300000: Brick
+    21300002: Flag
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -100,6 +101,60 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1851257aa0a36664f971a6b53facca9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flag
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1152
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: -8}
+        - {x: 7, y: -7}
+        - {x: 6, y: -7}
+        - {x: 6, y: -6}
+        - {x: 5, y: -6}
+        - {x: 5, y: -5}
+        - {x: 4, y: -5}
+        - {x: 4, y: -4}
+        - {x: 3, y: -4}
+        - {x: 3, y: -3}
+        - {x: 2, y: -3}
+        - {x: 2, y: -2}
+        - {x: 1, y: -2}
+        - {x: 1, y: -1}
+        - {x: 0, y: -1}
+        - {x: 0, y: 0}
+        - {x: -1, y: 0}
+        - {x: -1, y: 1}
+        - {x: -2, y: 1}
+        - {x: -2, y: 2}
+        - {x: -3, y: 2}
+        - {x: -3, y: 3}
+        - {x: -4, y: 3}
+        - {x: -4, y: 4}
+        - {x: -5, y: 4}
+        - {x: -5, y: 5}
+        - {x: -6, y: 5}
+        - {x: -6, y: 6}
+        - {x: -7, y: 6}
+        - {x: -7, y: 7}
+        - {x: -8, y: 7}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6b0ab2c1675a94fa7fd2eac1315c0b
       vertices: []
       indices: 
       edges: []

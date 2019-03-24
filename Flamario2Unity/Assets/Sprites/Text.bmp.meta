@@ -3,6 +3,7 @@ guid: 6fd03fac6a1c507458ade58b528e82db
 TextureImporter:
   fileIDToRecycleName:
     21300000: CoinIcon
+    21300002: GameOver
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -148,6 +149,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 6b1779bcc82549b4fb2864e1228adc69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOver
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 356
+        width: 71
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690e82550ef905f49afc047061358117
       vertices: []
       indices: 
       edges: []
