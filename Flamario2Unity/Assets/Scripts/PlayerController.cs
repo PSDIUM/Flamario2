@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour {
 			if (ray.collider != null) {
 				if (!GetCollision(dir)) {
 					float movement = ray.distance - (transform.lossyScale.x / 2);
-					transform.position += new Vector3(movement, 0, 0);
+					transform.position += new Vector3(movement * dir.x, 0, 0);
 					SetCollisions(dir, true);
 				}
 				return;
