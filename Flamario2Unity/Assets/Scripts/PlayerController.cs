@@ -10,9 +10,10 @@ public class PlayerController : MonoBehaviour {
 
 	private Collisions[] collisions;
 	private float speed = 10;
-	private float jumpSpeed = 15;
+	public float jumpSpeed = 15;
 	private float jumpVelocity = 0;
 	private float gravity = 20;
+    private bool grounded;
 
 	private void Start() {
 		playerState = PlayerStates.IDLE;
@@ -100,21 +101,28 @@ public class PlayerController : MonoBehaviour {
 		if (playerState == PlayerStates.JUMPING) {
 
 			jumpVelocity -= gravity * Time.deltaTime;
-			transform.position += new Vector3(0, jumpVelocity * Time.deltaTime, 0);
+            transform.position += new Vector3(0, jumpVelocity * Time.deltaTime, 0);
 
 			RaycastHit2D ray = GetRaycast(Vector2.down);
 
 			if (ray.collider != null) {
 				if (!GetCollision(Vector2.down)) {
 					float movement = ray.distance - (transform.lossyScale.x / 2);
-					transform.position += new Vector3(0, -movement, 0);
-					SetCollisions(Vector2.down, true);
+                    transform.position += new Vector3(0, (-movement * 2) * Time.deltaTime, 0);
+                    gameObject.GetComponent<Rigidbody2D>().gravityScale = 3;
+                    SetCollisions(Vector2.down, true);
 					SetCollisions(Vector2.up, false);
 					playerState = PlayerStates.IDLE;
+                    grounded = true;
 				}
 				return;
 			}
-		}
+            else
+            {
+                gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+                grounded = false;
+            }
+        }
 	}
 
 	/// <summary> Returns a raycast for the specified direction
