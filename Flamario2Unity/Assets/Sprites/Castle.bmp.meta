@@ -1,7 +1,9 @@
 fileFormatVersion: 2
-guid: b32f2b1609f481b408e03d93e2577e33
+guid: 45264c4383b87de44877ab00f46e1eea
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Castle
+    21300002: FlagPole
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -82,11 +84,79 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Castle
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 6
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0abbd640fa521a4a90ff8741304c131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlagPole
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 187
+        width: 16
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: -84}
+        - {x: -8, y: -68}
+        - {x: -1, y: -68}
+        - {x: -1, y: 76}
+        - {x: -2, y: 76}
+        - {x: -2, y: 77}
+        - {x: -3, y: 77}
+        - {x: -3, y: 78}
+        - {x: -4, y: 78}
+        - {x: -4, y: 82}
+        - {x: -3, y: 82}
+        - {x: -3, y: 83}
+        - {x: -2, y: 83}
+        - {x: -2, y: 84}
+        - {x: 2, y: 84}
+        - {x: 2, y: 83}
+        - {x: 3, y: 83}
+        - {x: 3, y: 82}
+        - {x: 4, y: 82}
+        - {x: 4, y: 78}
+        - {x: 3, y: 78}
+        - {x: 3, y: 77}
+        - {x: 2, y: 77}
+        - {x: 2, y: 76}
+        - {x: 1, y: 76}
+        - {x: 1, y: -68}
+        - {x: 8, y: -68}
+        - {x: 8, y: -84}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961b8971852caf343bb9c7b3c6833358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6e5adde8718f9df4b8ac87fd0d3c1626
+    spriteID: a9680d610f06857449eca267a754d56e
     vertices: []
     indices: 
     edges: []
