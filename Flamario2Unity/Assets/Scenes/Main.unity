@@ -8925,7 +8925,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &354344264
 PrefabInstance:
@@ -33759,7 +33759,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1308035755
 GameObject:
@@ -34669,7 +34669,7 @@ Transform:
   - {fileID: 496338204208936901}
   - {fileID: 1424205412}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1320795471 stripped
 Transform:
@@ -34919,7 +34919,7 @@ Transform:
   - {fileID: 978168589}
   - {fileID: 1749682563}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1332634898
 PrefabInstance:
@@ -41818,7 +41818,7 @@ RectTransform:
   - {fileID: 1750302545}
   - {fileID: 334612427}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -46628,7 +46628,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1714920678}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bricks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46690,7 +46690,7 @@ Transform:
   - {fileID: 1350706721}
   - {fileID: 1945626923}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1719013771 stripped
 Transform:
@@ -50854,7 +50854,7 @@ GameObject:
   - component: {fileID: 1887952828}
   - component: {fileID: 1887952827}
   m_Layer: 0
-  m_Name: Castle_0
+  m_Name: Castle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50920,7 +50920,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1890329204
 PrefabInstance:
@@ -56014,7 +56014,7 @@ Transform:
   - {fileID: 266176481}
   - {fileID: 1274045775}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2039961379
 PrefabInstance:
@@ -56671,7 +56671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2058662763
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -58965,6 +58965,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910648304024487390, guid: 04c66d3a4e11c4dfe8754816ad271bba,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}

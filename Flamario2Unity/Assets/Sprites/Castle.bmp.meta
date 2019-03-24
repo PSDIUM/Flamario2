@@ -2,7 +2,7 @@ fileFormatVersion: 2
 guid: 45264c4383b87de44877ab00f46e1eea
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Castle_0
+    21300000: Castle
     21300002: FlagPole
   externalObjects: {}
   serializedVersion: 9
@@ -86,7 +86,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Castle_0
+      name: Castle
       rect:
         serializedVersion: 2
         x: 247
