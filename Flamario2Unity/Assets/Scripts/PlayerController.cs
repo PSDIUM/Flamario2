@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour {
 	private float jumpVelocity = 0;
 	private float gravity = 20;
 
+	//Powers
+	[SerializeField] private GameObject flowerPower;
+	private bool hasFlowerPower = true;
+
 	private void Start() {
 		playerState = PlayerStates.IDLE;
 		SetCollisions();
@@ -28,7 +32,14 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+		Powers();
 		Movement();
+	}
+
+	private void Powers() {
+		if (Input.GetKeyDown(KeyCode.P) && hasFlowerPower) {
+			Instantiate(flowerPower, transform.position, Quaternion.identity);
+		}
 	}
 
 	private void Movement() {
@@ -37,10 +48,6 @@ public class PlayerController : MonoBehaviour {
 		    Jump();
 		    Fall();
         }
-	}
-
-	private void CheckCollision() {
-
 	}
 
 	private void Run() {

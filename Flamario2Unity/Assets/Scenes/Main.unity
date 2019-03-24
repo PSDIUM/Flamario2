@@ -25607,7 +25607,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947383429}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1908110080, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
   m_Name: 
@@ -27116,7 +27116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1031740879
 RectTransform:
   m_ObjectHideFlags: 0
@@ -55216,25 +55216,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2910648304595526621}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1974411147
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974411146}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3b37716bd2dddf846b16067f22a182bb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1981060830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 126127908838619458, guid: 14a7e963d95e94ac3913517f3bfff76e,
@@ -59848,21 +59829,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mario
       objectReference: {fileID: 0}
-    - target: {fileID: 2910648304024487388, guid: 04c66d3a4e11c4dfe8754816ad271bba,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2910648304024487388, guid: 04c66d3a4e11c4dfe8754816ad271bba,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2910648304024487388, guid: 04c66d3a4e11c4dfe8754816ad271bba,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2910648304024487384, guid: 04c66d3a4e11c4dfe8754816ad271bba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -59918,15 +59884,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2910648304024487390, guid: 04c66d3a4e11c4dfe8754816ad271bba,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.75
-      objectReference: {fileID: 0}
     - target: {fileID: 1974411147, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}
       propertyPath: gameController
       value: 
       objectReference: {fileID: 39271173}
+    - target: {fileID: 1974411147, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}
+      propertyPath: flowerPower
+      value: 
+      objectReference: {fileID: 379189290194938417, guid: 7a709e5907d514bf68bfa4558b4d5542,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}
 --- !u!1001 &3358244849910716533
