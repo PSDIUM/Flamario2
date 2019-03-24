@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
 	private float jumpVelocity = 0;
 	private float gravity = 20;
 
+
+
 	private void Start() {
 		playerState = PlayerStates.IDLE;
 		SetCollisions();
