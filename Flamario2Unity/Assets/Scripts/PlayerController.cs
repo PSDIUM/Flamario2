@@ -1,4 +1,4 @@
-﻿ng System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
     private int collisionLayer = 1<<9;
 	private PlayerStates playerState;
 
-	private Collisions[] collisions;
+	//private Collisions[] collisions;
 	[SerializeField] private float speed = 10;
 	[SerializeField] private float jumpSpeed = 15;
 	private float jumpVelocity = 0;
