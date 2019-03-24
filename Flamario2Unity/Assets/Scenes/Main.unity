@@ -52535,6 +52535,38 @@ PrefabInstance:
     - {fileID: 0}
     - {fileID: 126127908838619468, guid: 14a7e963d95e94ac3913517f3bfff76e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 14a7e963d95e94ac3913517f3bfff76e, type: 3}
+--- !u!1 &2043674510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 126127908838619470, guid: 14a7e963d95e94ac3913517f3bfff76e,
+    type: 3}
+  m_PrefabInstance: {fileID: 126127909694204986}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &2043674511
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043674510}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &2045102020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55007,6 +55039,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick
       objectReference: {fileID: 0}
+    - target: {fileID: 126127908838619470, guid: 14a7e963d95e94ac3913517f3bfff76e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 126127908838619458, guid: 14a7e963d95e94ac3913517f3bfff76e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -55083,7 +55120,8 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 126127908838619468, guid: 14a7e963d95e94ac3913517f3bfff76e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 14a7e963d95e94ac3913517f3bfff76e, type: 3}
 --- !u!4 &496338204208936901 stripped
 Transform:
@@ -55185,7 +55223,7 @@ PrefabInstance:
     - target: {fileID: 2910648304024487384, guid: 04c66d3a4e11c4dfe8754816ad271bba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 2910648304024487384, guid: 04c66d3a4e11c4dfe8754816ad271bba,
         type: 3}
@@ -55257,7 +55295,8 @@ PrefabInstance:
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2910648304024487391, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}
 --- !u!1001 &3358244849910716533
 PrefabInstance:
