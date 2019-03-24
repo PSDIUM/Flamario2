@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
+
+    public GameObject gameController;
 	private int collisionLayer = 1 << 9;
 	private PlayerStates playerState;
 
@@ -159,4 +161,11 @@ public class PlayerController : MonoBehaviour {
 			this.isColliding = isColliding;
 		}
 	}
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.name.Equals("BottomBorder")) {
+            StartCoroutine(gameController.GetComponent<GameController>().Death());
+        }
+    }
 }

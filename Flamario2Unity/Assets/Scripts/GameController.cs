@@ -7,8 +7,9 @@ using TMPro;
 
 public class GameController : MonoBehaviour {
 
-    public GameObject menuPanal, menuCursor, levelPanel, gameoverPanel, blackCoverPanel, player;
-    public TextMeshProUGUI topScoreText, scoreText, coinsText, timeNumText;
+    public GameObject menuPanal, menuCursor, levelPanel, gameoverPanel, blackCoverPanel, player, mainCamera;
+    public TextMeshProUGUI topScoreText, scoreText, coinsText, timeNumText, livesText;
+    public Sprite smallMarioStand, smallMarioDed;
 
     private float timeNumValue, scoreValue;
     private Vector3 player1LocalPos = new Vector3(-315, -152); // Worldspace (-2.8F, 4.2F, -0.3F)
@@ -23,6 +24,8 @@ public class GameController : MonoBehaviour {
         topScoreText.text = "Top- " + PlayerPrefs.GetFloat("TopScore").ToString("000000");
         menuPanal.SetActive(true);
         PlayerPrefs.SetInt("InMenu", 1);
+        PlayerPrefs.SetInt("Lives", 3);
+        livesText.text = "" + PlayerPrefs.GetInt("Lives");
         timeNumValue = 400;
         timer = Timer();
     }
@@ -56,7 +59,6 @@ public class GameController : MonoBehaviour {
         yield return new WaitForSeconds(2);
         blackCoverPanel.SetActive(true);
         yield return new WaitForSeconds(0.2F);
-        //timeNumText.text = "400";
         StartCoroutine(timer);
         levelPanel.SetActive(false);
         blackCoverPanel.SetActive(false);
@@ -100,6 +102,33 @@ public class GameController : MonoBehaviour {
         yield return new WaitForSeconds(1);
         PlayerPrefs.SetFloat("TopScore", scoreValue);
         SceneManager.LoadScene(0);
+    }
+
+    public IEnumerator Death() {
+        player.GetComponent<Rigidbody2D>().simulated = false;
+        StopCoroutine(timer);
+        PlayerPrefs.SetInt("InMenu", 1);
+        PlayerPrefs.SetInt("Lives", (PlayerPrefs.GetInt("Lives") - 1));
+        livesText.text = "" + PlayerPrefs.GetInt("Lives");
+        player.GetComponent<SpriteRenderer>().sprite = smallMarioDed;
+        yield return new WaitForSeconds(1);
+        if(PlayerPrefs.GetInt("Lives") > 0) {
+            levelPanel.SetActive(true);
+            player.transform.position = new Vector3(-8, 1, -0.1F);
+            mainCamera.transform.position = new Vector3(1, 6, -1);
+            player.GetComponent<SpriteRenderer>().sprite = smallMarioStand;
+            yield return new WaitForSeconds(2);
+            player.GetComponent<Rigidbody2D>().simulated = true;
+            StartCoroutine(timer);
+            levelPanel.SetActive(false);
+            PlayerPrefs.SetInt("InMenu", 0);
+        } else if(PlayerPrefs.GetInt("Lives") == 0) {
+            gameoverPanel.SetActive(true);
+            yield return new WaitForSeconds(2);
+            blackCoverPanel.SetActive(true);
+        yield return new WaitForSeconds(1);
+            SceneManager.LoadScene(0);
+        }
     }
 
     public void SetCursorState(CursorLockMode wantedMode) {
