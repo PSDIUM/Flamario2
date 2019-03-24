@@ -6,12 +6,13 @@ using TMPro;
 
 public class GameController : MonoBehaviour {
 
-    public GameObject menuPanal, menuCursor, levelPanel, gameoverPanel, blackCoverPanel;
+    public GameObject menuPanal, menuCursor, levelPanel, gameoverPanel, blackCoverPanel, player;
     public TextMeshProUGUI scoreText, coinsText, timeNumText;
 
-    private float timeNumValue;
+    private float timeNumValue, scoreValue;
     private Vector3 player1LocalPos = new Vector3(-315, -152); // Worldspace (-2.8F, 4.2F, -0.3F)
     private Vector3 player2LocalPos = new Vector3(-315, -232); // Worldspace (-2.8F, 3.2F, -0.3F)
+    private IEnumerator timer;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,8 @@ public class GameController : MonoBehaviour {
         menuPanal.SetActive(true);
         PlayerPrefs.SetInt("InMenu", 1);
         timeNumValue = 400;
+        PlayerPrefs.SetInt("FlagBase", 0);
+        timer = Timer();
     }
 
     // Update is called once per frame
@@ -40,6 +43,7 @@ public class GameController : MonoBehaviour {
         {
             QuitGame();
         }
+        Debug.Log(player.transform.position.y);
     }
 
     public IEnumerator StartGame() {
@@ -49,18 +53,43 @@ public class GameController : MonoBehaviour {
         blackCoverPanel.SetActive(true);
         yield return new WaitForSeconds(0.2F);
         //timeNumText.text = "400";
-        StartCoroutine(StartCountdown());
+        StartCoroutine(timer);
         levelPanel.SetActive(false);
         blackCoverPanel.SetActive(false);
         PlayerPrefs.SetInt("InMenu", 0);
-        yield return null;
     }
 
-    public IEnumerator StartCountdown() {
+    public IEnumerator Timer() {
         while (timeNumValue > 0) {
             timeNumText.text = "" + timeNumValue;
             yield return new WaitForSeconds(1.0F);
             timeNumValue--;
+        }
+    }
+
+    public IEnumerator FinishFlag() {
+        player.GetComponent<Rigidbody2D>().simulated = false;
+        StopCoroutine(timer);
+        PlayerPrefs.SetInt("InMenu", 1);
+        while (player.transform.position.y > 1) {
+            player.transform.position = new Vector2(179.2F, player.transform.position.y - 0.05F);
+            yield return null;
+        }
+        while (player.transform.position.x < 185.5) {
+            player.transform.position = new Vector2(player.transform.position.x + 0.06F, 1);
+            yield return null;
+        }
+        player.SetActive(false);
+        StartCoroutine(FinalScore());
+    }
+
+    public IEnumerator FinalScore() {
+        while (timeNumValue >= 0) {
+            timeNumText.text = "" + timeNumValue;
+            timeNumValue--;
+            scoreValue += 50;
+            scoreText.text = "Mario\n" + scoreValue.ToString("000000");
+            yield return null;
         }
     }
 

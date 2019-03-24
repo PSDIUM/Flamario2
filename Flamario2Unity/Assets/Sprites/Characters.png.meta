@@ -16,6 +16,8 @@ TextureImporter:
     21300022: SmallMarioSkid
     21300024: SmallMarioJump
     21300026: SmallMarioDed
+    21300028: MarioClimb
+    21300030: SmallMarioClimb
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -373,6 +375,46 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f7e9eb39e830c9540824dd744b801a32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarioClimb
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 654
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f1a8ccecbfbb543988ec879675c35c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallMarioClimb
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 637
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5f386ec37cebd4584c920c770b77f5
       vertices: []
       indices: 
       edges: []
