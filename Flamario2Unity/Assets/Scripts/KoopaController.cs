@@ -18,11 +18,13 @@ public class KoopaController : MonoBehaviour
     KoopaState state;
     [SerializeField]
     private Rigidbody2D koopaRb;
+    private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
         dir = Vector2.left;
         state = KoopaState.Walking;
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
     
     private void Update()
@@ -59,7 +61,6 @@ public class KoopaController : MonoBehaviour
                         state = KoopaState.InShell;
                         Debug.Log("Hit on top");
                     }
-
                     break;
 
                 case KoopaState.InShell:
@@ -78,8 +79,15 @@ public class KoopaController : MonoBehaviour
         if (IsColliding())
         {
             dir *= -1;
+            {
+                if (spriteRenderer.flipX == true)
+                    spriteRenderer.flipX = false;
+                else
+                    spriteRenderer.flipX = true;
+            }
         }
         transform.position += new Vector3(dir.x * speed * Time.deltaTime, 0, 0);
+
     }
 
     private bool IsColliding()
@@ -91,7 +99,7 @@ public class KoopaController : MonoBehaviour
         return hit.collider != null;
     }
 
-    private void stopReset()
+    private void StopReset()
     {
         StopCoroutine(Reset());
     }
