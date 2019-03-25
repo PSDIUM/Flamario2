@@ -100,6 +100,9 @@ public class PlayerController : MonoBehaviour {
 			if (!GetCollision(Vector2.up)) {
 				RaycastHit2D ray = GetRaycast(Vector2.up);
 				if (ray.collider != null) {
+					if (ray.collider.gameObject.tag.Equals("Block")) {
+						ray.collider.gameObject.GetComponent<BlockController>().HitAnimation();
+					}
 					jumpVelocity = 0;
 					SetCollisions(Vector2.up, true);
 				}
