@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 	public float jumpSpeed = 15;
 	private float jumpVelocity = 0;
 	private float gravity = 35;
-    private bool grounded;
+    [SerializeField]  private bool grounded;
 	private Vector2 currentDirection;
 
 	//Powers
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour {
 					CheckBlock(ray.collider.gameObject);
 					jumpVelocity = 0;
 					SetCollisions(Vector2.up, true);
-				}
+                }
 			}
 		} else {
             gameObject.GetComponent<Animator>().SetBool("Jumping", false);
@@ -142,14 +142,14 @@ public class PlayerController : MonoBehaviour {
                     SetCollisions(Vector2.down, true);
 					SetCollisions(Vector2.up, false);
 					playerState = PlayerStates.IDLE;
-                    grounded = true;
+                    grounded = false;
 				}
 				return;
 			}
             else
             {
                 gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.1f;
-                grounded = false;
+                grounded = true;
             }
         }
 	}
