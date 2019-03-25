@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 768
 --- !u!61 &8542985808864084779
 BoxCollider2D:
   m_ObjectHideFlags: 0

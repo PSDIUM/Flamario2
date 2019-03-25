@@ -121,7 +121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 0}
-  flowerPower: {fileID: 0}
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 768
+  flowerPower: {fileID: 379189290194938417, guid: 7a709e5907d514bf68bfa4558b4d5542,
+    type: 3}
 --- !u!95 &8663561256479384962
 Animator:
   serializedVersion: 3

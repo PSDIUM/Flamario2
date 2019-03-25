@@ -28,10 +28,14 @@ public class FlowerPower : MonoBehaviour {
 	private void Movement() {
 		RaycastHit2D ray = GetRaycast(direction);
 
-		if (ray.collider!=null && !hasCollided) {
-			//direction = Vector2.Reflect(direction, ray.normal);
-			direction.y *= -1;
-			hasCollided = true;
+		if (ray.collider!=null) {
+			if (ray.collider.gameObject.tag.Equals("Ground") && !hasCollided) {
+				direction.y *= -1;
+				hasCollided = true;
+			}
+			if (ray.collider.gameObject.tag.Equals("Obstacle")) {
+				Die();
+			}
 		}
 
 		if (hasCollided) {
@@ -59,4 +63,8 @@ public class FlowerPower : MonoBehaviour {
 		return hit;
 	}
 
+
+	private void Die() {
+		Destroy(this.gameObject);
+	}
 }

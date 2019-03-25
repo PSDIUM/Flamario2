@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public GameObject gameController;
-	private int collisionLayer = 1 << 9;
+	[SerializeField] private LayerMask collisionLayer;
 	private PlayerStates playerState;
 
 	private Collisions[] collisions;
