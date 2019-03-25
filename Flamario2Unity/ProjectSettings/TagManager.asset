@@ -8,6 +8,8 @@ TagManager:
   - Ground
   - Obstacle
   - Block
+  - Brick
+  - QuestionBlock
   layers:
   - Default
   - TransparentFX
