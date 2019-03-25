@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour {
                     SetCollisions(Vector2.down, true);
 					SetCollisions(Vector2.up, false);
 					playerState = PlayerStates.IDLE;
-                    grounded = false;
+                    grounded = true;
 				}
 				if (ray.collider.gameObject.tag.Equals("Goomba")) {
 					Destroy(ray.collider.gameObject);
@@ -165,7 +165,7 @@ public class PlayerController : MonoBehaviour {
             else
             {
                 gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.1f;
-                grounded = true;
+                grounded = false;
             }
         }
 	}
