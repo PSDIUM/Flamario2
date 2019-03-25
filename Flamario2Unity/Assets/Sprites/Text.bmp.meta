@@ -5,6 +5,7 @@ TextureImporter:
     21300000: CoinIcon
     21300002: GameOver
     21300004: Cross
+    21300006: Copyright
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -226,6 +227,70 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 39f6adb7c733c924c8f64573d8dc26ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copyright
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 2
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: -1}
+        - {x: -2, y: 1}
+        - {x: -1, y: 1}
+        - {x: -1, y: -1}
+      - - {x: -1, y: -2}
+        - {x: -1, y: -1}
+        - {x: 1, y: -1}
+        - {x: 1, y: -2}
+      - - {x: -1, y: 1}
+        - {x: -1, y: 2}
+        - {x: 1, y: 2}
+        - {x: 1, y: 1}
+      - - {x: 2, y: 2}
+        - {x: 2, y: 3}
+        - {x: 3, y: 3}
+        - {x: 3, y: 2}
+      - - {x: 3, y: -2}
+        - {x: 3, y: 2}
+        - {x: 4, y: 2}
+        - {x: 4, y: -2}
+      - - {x: 2, y: -3}
+        - {x: 2, y: -2}
+        - {x: 3, y: -2}
+        - {x: 3, y: -3}
+      - - {x: -2, y: -4}
+        - {x: -2, y: -3}
+        - {x: 2, y: -3}
+        - {x: 2, y: -4}
+      - - {x: -3, y: -3}
+        - {x: -3, y: -2}
+        - {x: -2, y: -2}
+        - {x: -2, y: -3}
+      - - {x: -4, y: -2}
+        - {x: -4, y: 2}
+        - {x: -3, y: 2}
+        - {x: -3, y: -2}
+      - - {x: -3, y: 2}
+        - {x: -3, y: 3}
+        - {x: -2, y: 3}
+        - {x: -2, y: 2}
+      - - {x: -2, y: 3}
+        - {x: -2, y: 4}
+        - {x: 2, y: 4}
+        - {x: 2, y: 3}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9475e5db4683a1a4db84a5a7a9c554da
       vertices: []
       indices: 
       edges: []
