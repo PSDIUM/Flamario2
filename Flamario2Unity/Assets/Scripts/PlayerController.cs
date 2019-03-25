@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
 	private float jumpSpeed = 15;
 	private float jumpVelocity = 0;
 	private float gravity = 20;
+	private Vector2 currentDirection;
 
 	//Powers
 	[SerializeField] private GameObject flowerPower;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 
 	private void Start() {
 		playerState = PlayerStates.IDLE;
+		currentDirection = Vector2.right;
 		SetCollisions();
 	}
 
@@ -38,7 +40,8 @@ public class PlayerController : MonoBehaviour {
 
 	private void Powers() {
 		if (Input.GetKeyDown(KeyCode.P) && hasFlowerPower) {
-			Instantiate(flowerPower, transform.position, Quaternion.identity);
+			GameObject projectile = Instantiate(flowerPower, transform.position, Quaternion.identity);
+			projectile.GetComponent<FlowerPower>().SetDirection(currentDirection);
 		}
 	}
 
@@ -56,6 +59,8 @@ public class PlayerController : MonoBehaviour {
             gameObject.GetComponent<Animator>().SetBool("Moving", true);
 			float velocity = hInput * speed * Time.deltaTime;
 			Vector2 dir = hInput < 0 ? Vector3.left : Vector3.right;
+			currentDirection = dir;
+            
             if(dir == Vector2.left && gameObject.GetComponent<SpriteRenderer>().flipX == false) {
                 gameObject.GetComponent<SpriteRenderer>().flipX = true;
             } else if(dir == Vector2.right && gameObject.GetComponent<SpriteRenderer>().flipX == true) {
