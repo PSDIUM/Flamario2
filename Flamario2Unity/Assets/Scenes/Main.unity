@@ -60103,6 +60103,11 @@ PrefabInstance:
       propertyPath: collisionLayer.m_Bits
       value: 8960
       objectReference: {fileID: 0}
+    - target: {fileID: 8663561256479384962, guid: 04c66d3a4e11c4dfe8754816ad271bba,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5fd00521fee322f418efda3f536e238a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}
 --- !u!1001 &3358244849910716533
