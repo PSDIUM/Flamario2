@@ -7,7 +7,7 @@ using TMPro;
 
 public class GameController : MonoBehaviour {
 
-    public GameObject menuPanal, menuCursor, levelPanel, gameoverPanel, blackCoverPanel, player, mainCamera;
+    public GameObject menuPanal, menuCursor, levelPanel, gameoverPanel, blackCoverPanel, player, mainCamera, flag;
     public TextMeshProUGUI topScoreText, scoreText, coinsText, timeNumText, livesText;
     public Sprite smallMarioStand, smallMarioDed;
 
@@ -79,6 +79,7 @@ public class GameController : MonoBehaviour {
         StopCoroutine(timer);
         PlayerPrefs.SetInt("InMenu", 1);
         while (player.transform.position.y > 1) {
+            flag.transform.position = new Vector2(flag.transform.position.x, flag.transform.position.y - 0.05F);
             player.transform.position = new Vector2(179.2F, player.transform.position.y - 0.05F);
             yield return null;
         }

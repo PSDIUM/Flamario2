@@ -1309,6 +1309,7 @@ MonoBehaviour:
   blackCoverPanel: {fileID: 800894226}
   player: {fileID: 1974411146}
   mainCamera: {fileID: 519420028}
+  flag: {fileID: 1749682562}
   topScoreText: {fileID: 1456843300}
   scoreText: {fileID: 152758375}
   coinsText: {fileID: 1729429327}
@@ -26028,7 +26029,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -26039,7 +26040,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.13, y: 9.5}
+  m_Size: {x: 0.13, y: 10.5}
   m_EdgeRadius: 0
 --- !u!114 &978168592
 MonoBehaviour:
@@ -60043,7 +60044,7 @@ PrefabInstance:
     - target: {fileID: 2910648304024487384, guid: 04c66d3a4e11c4dfe8754816ad271bba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 154
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 2910648304024487384, guid: 04c66d3a4e11c4dfe8754816ad271bba,
         type: 3}
