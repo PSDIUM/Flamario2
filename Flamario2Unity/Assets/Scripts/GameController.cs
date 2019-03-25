@@ -7,9 +7,8 @@ using TMPro;
 
 public class GameController : MonoBehaviour {
 
-    public GameObject menuPanal, menuCursor, levelPanel, gameoverPanel, blackCoverPanel, player, mainCamera;
+    public GameObject menuPanal, menuCursor, levelPanel, gameoverPanel, blackCoverPanel, player, mainCamera, flag;
     public TextMeshProUGUI topScoreText, scoreText, coinsText, timeNumText, livesText;
-    public Sprite smallMarioStand, smallMarioDed;
 
     private float timeNumValue, scoreValue;
     private Vector3 player1LocalPos = new Vector3(-315, -152); // Worldspace (-2.8F, 4.2F, -0.3F)
@@ -75,16 +74,22 @@ public class GameController : MonoBehaviour {
 
     public IEnumerator FinishFlag() {
         player.GetComponent<Rigidbody2D>().simulated = false;
+        player.GetComponent<Animator>().SetBool("Flag", true);
         StopCoroutine(timer);
         PlayerPrefs.SetInt("InMenu", 1);
         while (player.transform.position.y > 1) {
+            flag.transform.position = new Vector2(flag.transform.position.x, flag.transform.position.y - 0.05F);
             player.transform.position = new Vector2(179.2F, player.transform.position.y - 0.05F);
             yield return null;
         }
+        player.GetComponent<Animator>().SetBool("Jumping", false);
+        player.GetComponent<Animator>().SetBool("Flag", false);
+        player.GetComponent<Animator>().SetBool("Moving", true);
         while (player.transform.position.x < 185.5) {
             player.transform.position = new Vector2(player.transform.position.x + 0.06F, 1);
             yield return null;
         }
+        player.GetComponent<Animator>().SetBool("Moving", false);
         player.SetActive(false);
         StartCoroutine(FinalScore());
     }
@@ -110,13 +115,13 @@ public class GameController : MonoBehaviour {
         PlayerPrefs.SetInt("InMenu", 1);
         PlayerPrefs.SetInt("Lives", (PlayerPrefs.GetInt("Lives") - 1));
         livesText.text = "" + PlayerPrefs.GetInt("Lives");
-        player.GetComponent<SpriteRenderer>().sprite = smallMarioDed;
+        player.GetComponent<Animator>().SetBool("Ded", true);
         yield return new WaitForSeconds(1);
         if(PlayerPrefs.GetInt("Lives") > 0) {
             levelPanel.SetActive(true);
             player.transform.position = new Vector3(-8, 1, -0.1F);
             mainCamera.transform.position = new Vector3(1, 6, -1);
-            player.GetComponent<SpriteRenderer>().sprite = smallMarioStand;
+            player.GetComponent<Animator>().SetBool("Ded", false);
             yield return new WaitForSeconds(2);
             player.GetComponent<Rigidbody2D>().simulated = true;
             StartCoroutine(timer);
