@@ -75,16 +75,21 @@ public class GameController : MonoBehaviour {
 
     public IEnumerator FinishFlag() {
         player.GetComponent<Rigidbody2D>().simulated = false;
+        player.GetComponent<Animator>().SetBool("Flag", true);
         StopCoroutine(timer);
         PlayerPrefs.SetInt("InMenu", 1);
         while (player.transform.position.y > 1) {
             player.transform.position = new Vector2(179.2F, player.transform.position.y - 0.05F);
             yield return null;
         }
+        player.GetComponent<Animator>().SetBool("Jumping", false);
+        player.GetComponent<Animator>().SetBool("Flag", false);
+        player.GetComponent<Animator>().SetBool("Moving", true);
         while (player.transform.position.x < 185.5) {
             player.transform.position = new Vector2(player.transform.position.x + 0.06F, 1);
             yield return null;
         }
+        player.GetComponent<Animator>().SetBool("Moving", false);
         player.SetActive(false);
         StartCoroutine(FinalScore());
     }
