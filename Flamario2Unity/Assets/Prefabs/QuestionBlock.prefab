@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 140015780914307624}
   - component: {fileID: 2115992871157529734}
   - component: {fileID: 8289323966783041118}
+  - component: {fileID: 1823373080}
   m_Layer: 9
   m_Name: QuestionBlock
   m_TagString: QuestionBlock
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140015780914307627}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -119,3 +120,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dc88194bb3f407cafba281c2a8dc92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1823373080
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140015780914307627}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 731d800afb16a2c4fa2e4c3c6e478340, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

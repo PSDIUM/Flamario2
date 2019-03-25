@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
 
 	//Powers
 	[SerializeField] private GameObject flowerPower;
+	private bool canPower = true;
 	private bool hasFlowerPower = true;
 	private bool isBig = false;
 
@@ -41,10 +42,22 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void Powers() {
-		if (Input.GetKeyDown(KeyCode.P) && hasFlowerPower) {
+		if (Input.GetKeyDown(KeyCode.P) && hasFlowerPower && canPower) {
 			GameObject projectile = Instantiate(flowerPower, transform.position, Quaternion.identity);
 			projectile.GetComponent<FlowerPower>().SetDirection(currentDirection);
+			canPower = false;
+			StartCoroutine(ResetPower());
 		}
+	}
+
+	private IEnumerator ResetPower() {
+		float t = 0.5f;
+		float elapsedTime = 0;
+		while (elapsedTime < t) {
+			elapsedTime += Time.deltaTime;
+			yield return null;
+		}
+		canPower = true;
 	}
 
 	private void Movement() {
@@ -143,6 +156,9 @@ public class PlayerController : MonoBehaviour {
 					SetCollisions(Vector2.up, false);
 					playerState = PlayerStates.IDLE;
                     grounded = false;
+				}
+				if (ray.collider.gameObject.tag.Equals("Goomba")) {
+					Destroy(ray.collider.gameObject);
 				}
 				return;
 			}
