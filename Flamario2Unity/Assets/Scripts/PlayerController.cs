@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
 	//Powers
 	[SerializeField] private GameObject flowerPower;
 	private bool hasFlowerPower = true;
-	private bool isBig = true;
+	private bool isBig = false;
 
 	private void Start() {
 		playerState = PlayerStates.IDLE;
@@ -102,12 +102,6 @@ public class PlayerController : MonoBehaviour {
 				RaycastHit2D ray = GetRaycast(Vector2.up);
 				if (ray.collider != null) {
 					CheckBlock(ray.collider.gameObject);
-					//if (.Equals("Brick")) {
-					//	if (!isBig) {
-
-					//	}
-					//	ray.collider.gameObject.GetComponent<BlockController>().HitAnimation();
-					//}
 					jumpVelocity = 0;
 					SetCollisions(Vector2.up, true);
 				}
