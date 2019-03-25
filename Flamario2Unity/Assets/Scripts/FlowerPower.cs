@@ -5,12 +5,14 @@ using UnityEngine;
 public class FlowerPower : MonoBehaviour {
 
 	[SerializeField] private LayerMask collisionLayer;
+    public Animator fireballAnimator;
 	private Vector2 direction;
 	private float speed = 10;
 
 	private bool hasCollided;
 	private float maxTime = 0.1f;
 	private float currentTime;
+    private bool ded = false;
 
 	private void Start() {
 		direction.y = -1;
@@ -34,7 +36,9 @@ public class FlowerPower : MonoBehaviour {
 				hasCollided = true;
 			}
 			if (ray.collider.gameObject.tag.Equals("Obstacle")) {
-				Die();
+                ded = true;
+                fireballAnimator.SetBool("Explode", true);
+				StartCoroutine(Die());
 			}
 		}
 
@@ -43,7 +47,9 @@ public class FlowerPower : MonoBehaviour {
 		}
 
 		Vector2 velocity = speed * direction * Time.deltaTime; ;
-		transform.position += new Vector3(velocity.x, velocity.y, 0);
+        if (ded == false) {
+            transform.position += new Vector3(velocity.x, velocity.y, 0);
+        }
 	}
 
 	private void Bounce() {
@@ -64,7 +70,12 @@ public class FlowerPower : MonoBehaviour {
 	}
 
 
-	private void Die() {
+	/* private void Die() {
 		Destroy(this.gameObject);
-	}
+	} */
+
+    private IEnumerator Die() {
+        yield return new WaitForSeconds(0.2F);
+        Destroy(this.gameObject);
+    }
 }
