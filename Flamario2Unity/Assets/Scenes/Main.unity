@@ -20990,7 +20990,7 @@ GameObject:
   - component: {fileID: 782183226}
   - component: {fileID: 782183228}
   - component: {fileID: 782183227}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: RightBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31330,7 +31330,7 @@ GameObject:
   - component: {fileID: 1198144282}
   - component: {fileID: 1198144284}
   - component: {fileID: 1198144283}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: LeftBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31361,7 +31361,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -60100,7 +60100,7 @@ PrefabInstance:
       objectReference: {fileID: 39271173}
     - target: {fileID: 1974411147, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}
       propertyPath: collisionLayer.m_Bits
-      value: 8960
+      value: 25344
       objectReference: {fileID: 0}
     - target: {fileID: 8663561256479384962, guid: 04c66d3a4e11c4dfe8754816ad271bba,
         type: 3}
