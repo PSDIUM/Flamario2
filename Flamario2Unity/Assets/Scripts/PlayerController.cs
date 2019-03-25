@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour {
 			}
             else
             {
-                gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+                gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.1f;
                 grounded = false;
             }
         }
