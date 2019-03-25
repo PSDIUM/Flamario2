@@ -5,7 +5,7 @@ using UnityEngine;
 public class KoopaController : MonoBehaviour
 {
     [SerializeField] protected LayerMask collisionLayer;
-    [SerializeField] protected float speed = 5;
+    [SerializeField] protected float speed = 3;
     protected Vector2 dir;
     enum KoopaState
     {
@@ -31,6 +31,7 @@ public class KoopaController : MonoBehaviour
         switch (state)
         {
             case KoopaState.Walking:
+                speed = 3;
                 Movement();
                 break;
 
@@ -38,8 +39,6 @@ public class KoopaController : MonoBehaviour
                 Movement();
                 break;
         }
-        
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -50,8 +49,8 @@ public class KoopaController : MonoBehaviour
             switch (state)
             {
                 case KoopaState.Walking:
-                    /*
-                     * // Detects if Mario hits Koopa from the top
+                    
+                    // Detects if Mario hits Koopa from the top
                     Vector3 hit = collision.contacts[0].normal;
                     float angle = Vector3.Angle(hit, Vector3.up);
 
@@ -60,10 +59,6 @@ public class KoopaController : MonoBehaviour
                         state = KoopaState.InShell;
                         Debug.Log("Hit on top");
                     }
-                    */
-
-                    state = KoopaState.InShell; 
-                    Debug.Log("Hit" + state);
 
                     break;
 
@@ -71,6 +66,8 @@ public class KoopaController : MonoBehaviour
                     state = KoopaState.Zooming;
                     dir *= -1;
                     speed = 10;
+                    Reset();
+                    StartCoroutine(Reset());
                     break;
             }
         }
@@ -92,6 +89,17 @@ public class KoopaController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(origin, dir, transform.lossyScale.x / 2, collisionLayer);
         //Debug.DrawRay(origin, dir * transform.lossyScale.x/2, Color.yellow);
         return hit.collider != null;
+    }
+
+    private void stopReset()
+    {
+        StopCoroutine(Reset());
+    }
+
+    private IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(6);
+        state = KoopaState.Walking;
     }
 
 }
