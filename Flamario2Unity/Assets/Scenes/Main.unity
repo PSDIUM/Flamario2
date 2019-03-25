@@ -34409,6 +34409,7 @@ GameObject:
   - component: {fileID: 1307686116}
   - component: {fileID: 1307686119}
   - component: {fileID: 1307686120}
+  - component: {fileID: 1307686121}
   m_Layer: 13
   m_Name: Goomba
   m_TagString: Goomba
@@ -34541,6 +34542,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &1307686121
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307686115}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64da8fb41b80c2f488955467e7d06334, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1308035755
 GameObject:
   m_ObjectHideFlags: 0

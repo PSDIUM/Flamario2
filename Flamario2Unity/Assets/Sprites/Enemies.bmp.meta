@@ -2,10 +2,11 @@ fileFormatVersion: 2
 guid: a35faaf658770144c9dbbe50aada11bd
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Goomba
+    21300000: Goomba1
     21300002: Koopa1
     21300004: Koopah2
     21300006: Shell
+    21300008: Goomba2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -88,7 +89,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Goomba
+      name: Goomba1
       rect:
         serializedVersion: 2
         x: 0
@@ -116,7 +117,7 @@ TextureImporter:
         width: 15
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -136,7 +137,7 @@ TextureImporter:
         width: 16
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -156,13 +157,33 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 5bb333d967fb39b4392717534a4b8006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goomba2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 241
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1d2bb8365a0b2469d7bd664dee53fb
       vertices: []
       indices: 
       edges: []
