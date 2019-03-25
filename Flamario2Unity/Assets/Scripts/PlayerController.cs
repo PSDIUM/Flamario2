@@ -9,10 +9,10 @@ public class PlayerController : MonoBehaviour {
 	private PlayerStates playerState;
 
 	private Collisions[] collisions;
-	private float speed = 10;
+	private float speed = 7;
 	public float jumpSpeed = 15;
 	private float jumpVelocity = 0;
-	private float gravity = 20;
+	private float gravity = 35;
     private bool grounded;
 	private Vector2 currentDirection;
 
@@ -116,14 +116,14 @@ public class PlayerController : MonoBehaviour {
 		if (playerState == PlayerStates.JUMPING) {
 
 			jumpVelocity -= gravity * Time.deltaTime;
-            transform.position += new Vector3(0, jumpVelocity * Time.deltaTime, 0);
+            transform.position += new Vector3(0, jumpVelocity * (Time.deltaTime * 1.5f), 0);
 
 			RaycastHit2D ray = GetRaycast(Vector2.down);
 
 			if (ray.collider != null) {
 				if (!GetCollision(Vector2.down)) {
 					float movement = ray.distance - (transform.lossyScale.x / 2);
-                    transform.position += new Vector3(0, (-movement * 2) * Time.deltaTime, 0);
+                    transform.position += new Vector3(0, -movement * Time.deltaTime, 0);
                     gameObject.GetComponent<Rigidbody2D>().gravityScale = 3;
                     SetCollisions(Vector2.down, true);
 					SetCollisions(Vector2.up, false);
