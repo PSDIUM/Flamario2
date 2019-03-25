@@ -31,4 +31,14 @@ public class EnemyController : MonoBehaviour {
 		//Debug.DrawRay(origin, dir * transform.lossyScale.x/2, Color.yellow);
 		return hit.collider != null;
 	}
+
+	private void OnTriggerEnter2D(Collider2D col) {
+		if (col.gameObject.tag.Equals("Projectile")) {
+			Die();
+		}
+	}
+
+	private void Die() {
+		Destroy(this.gameObject);
+	}
 }

@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Projectile
+  - Ground
+  - Obstacle
+  - Block
+  - Brick
+  - QuestionBlock
+  - Goomba
   layers:
   - Default
   - TransparentFX
@@ -17,8 +24,8 @@ TagManager:
   - Obstacle
   - Background
   - Player
-  - 
-  - 
+  - Projectile
+  - Enemy
   - 
   - 
   - 
