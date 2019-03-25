@@ -4,6 +4,7 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: Brick
     21300002: Flag
+    21300004: FlowerPower
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -155,6 +156,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 3d6b0ab2c1675a94fa7fd2eac1315c0b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlowerPower
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 298
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0876866fd57e9430b856ea1fd77e4273
       vertices: []
       indices: 
       edges: []
