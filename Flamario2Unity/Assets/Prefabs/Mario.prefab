@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2910648304024487390}
   - component: {fileID: 1974411147}
   - component: {fileID: 8663561256479384962}
+  - component: {fileID: 1974411152}
   m_Layer: 11
   m_Name: Mario
   m_TagString: Player
@@ -124,6 +125,7 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 768
+  jumpSpeed: 15
   flowerPower: {fileID: 379189290194938417, guid: 7a709e5907d514bf68bfa4558b4d5542,
     type: 3}
 --- !u!95 &8663561256479384962
@@ -145,3 +147,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &1974411152
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2910648304024487388}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

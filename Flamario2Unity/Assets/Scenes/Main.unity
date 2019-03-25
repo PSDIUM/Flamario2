@@ -59933,24 +59933,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2910648304024487390, guid: 04c66d3a4e11c4dfe8754816ad271bba,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 2910648304024487391, guid: 04c66d3a4e11c4dfe8754816ad271bba,
-        type: 3}
-      propertyPath: m_Mass
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 1974411147, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}
       propertyPath: gameController
       value: 
       objectReference: {fileID: 39271173}
-    - target: {fileID: 1974411147, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}
-      propertyPath: jumpSpeed
-      value: 15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}
 --- !u!1001 &3358244849910716533
