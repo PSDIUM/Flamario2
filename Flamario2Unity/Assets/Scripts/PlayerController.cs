@@ -9,11 +9,11 @@ public class PlayerController : MonoBehaviour {
 	private PlayerStates playerState;
 
 	private Collisions[] collisions;
-	private float speed = 7;
+	private float speed = 7.5f;
 	public float jumpSpeed = 15;
 	private float jumpVelocity = 0;
 	private float gravity = 35;
-    private bool grounded;
+    [SerializeField]  private bool grounded;
 	private Vector2 currentDirection;
 
 	//Powers
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour {
 					CheckBlock(ray.collider.gameObject);
 					jumpVelocity = 0;
 					SetCollisions(Vector2.up, true);
-				}
+                }
 			}
 		} else {
             gameObject.GetComponent<Animator>().SetBool("Jumping", false);
