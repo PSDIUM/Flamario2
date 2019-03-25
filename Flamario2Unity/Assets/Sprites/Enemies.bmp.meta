@@ -1,10 +1,8 @@
 fileFormatVersion: 2
-guid: 8c9b2be099b313d4da6ba10890f11ac2
+guid: a35faaf658770144c9dbbe50aada11bd
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Brick
-    21300002: Flag
-    21300004: FlowerPower
+    21300000: Goomba
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -87,87 +85,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Brick
+      name: Goomba
       rect:
         serializedVersion: 2
-        x: 373
-        y: 1133
+        x: 0
+        y: 241
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1851257aa0a36664f971a6b53facca9d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flag
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 1152
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 7, y: -8}
-        - {x: 7, y: -7}
-        - {x: 6, y: -7}
-        - {x: 6, y: -6}
-        - {x: 5, y: -6}
-        - {x: 5, y: -5}
-        - {x: 4, y: -5}
-        - {x: 4, y: -4}
-        - {x: 3, y: -4}
-        - {x: 3, y: -3}
-        - {x: 2, y: -3}
-        - {x: 2, y: -2}
-        - {x: 1, y: -2}
-        - {x: 1, y: -1}
-        - {x: 0, y: -1}
-        - {x: 0, y: 0}
-        - {x: -1, y: 0}
-        - {x: -1, y: 1}
-        - {x: -2, y: 1}
-        - {x: -2, y: 2}
-        - {x: -3, y: 2}
-        - {x: -3, y: 3}
-        - {x: -4, y: 3}
-        - {x: -4, y: 4}
-        - {x: -5, y: 4}
-        - {x: -5, y: 5}
-        - {x: -6, y: 5}
-        - {x: -6, y: 6}
-        - {x: -7, y: 6}
-        - {x: -7, y: 7}
-        - {x: -8, y: 7}
-        - {x: -8, y: 8}
-        - {x: 8, y: 8}
-        - {x: 8, y: -8}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d6b0ab2c1675a94fa7fd2eac1315c0b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlowerPower
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 298
-        width: 8
-        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,7 +99,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0876866fd57e9430b856ea1fd77e4273
+      spriteID: fdd4314130b0742949b7d9bcddd64572
       vertices: []
       indices: 
       edges: []
@@ -183,7 +107,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f91f1edfdbd85aa48885a7a3248b7b1d
+    spriteID: 8b7b82eae1fb24a4bb7b283de7ebaf49
     vertices: []
     indices: 
     edges: []

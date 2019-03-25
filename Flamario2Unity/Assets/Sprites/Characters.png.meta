@@ -16,6 +16,39 @@ TextureImporter:
     21300022: SmallMarioSkid
     21300024: SmallMarioJump
     21300026: SmallMarioDed
+    21300028: MarioClimb
+    21300030: SmallMarioClimb
+    21300032: FireMarioStand
+    21300034: FireMarioWalk1
+    21300036: FireMarioWalk2
+    21300038: FireMarioWalk3
+    21300040: FireMarioSkid
+    21300042: FireMarioJump
+    21300044: FireMarioDuck
+    21300046: FireMarioClimb
+    21300048: SmallFireMarioStand
+    21300050: SmallFireMarioWalk1
+    21300052: SmallFireMarioWalk2
+    21300054: SmallFireMarioWalk3
+    21300056: SmallFireMarioSkid
+    21300058: SmallFireMarioJump
+    21300060: SmallFireMarioDed
+    21300062: SmallFireMarioClimb
+    21300064: InvincibleMarioStand
+    21300066: InvincibleMarioWalk1
+    21300068: InvincibleMarioWalk2
+    21300070: InvincibleMarioWalk3
+    21300072: InvincibleMarioSkid
+    21300074: InvincibleMarioJump
+    21300076: InvincibleMarioDuck
+    21300078: InvincibleMarioClimb
+    21300080: SmallInvincibleMarioStand
+    21300082: SmallInvincibleMarioWalk1
+    21300084: SmallInvincibleMarioWalk2
+    21300086: SmallInvincibleMarioWalk3
+    21300088: SmallInvincibleMarioSkid
+    21300090: SmallInvincibleMarioJump
+    21300092: SmallInvincibleMarioDed
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -373,6 +406,666 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f7e9eb39e830c9540824dd744b801a32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarioClimb
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 654
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f1a8ccecbfbb543988ec879675c35c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallMarioClimb
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 637
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5f386ec37cebd4584c920c770b77f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireMarioStand
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 526
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4ad90c1c32eba46bc155d39c11ae45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireMarioWalk1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 526
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44664e702f5a9b429da7fad0b12e781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireMarioWalk2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 526
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a647d50cb83fe408c4c7f37df4515e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireMarioWalk3
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 526
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37329e2ee3e767c47b07da1b6ac4b6d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireMarioSkid
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 526
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9f3b0f67c8a824c928cda6b8649d52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireMarioJump
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 526
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e42a6815c77d8841ae19cf255246e39
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireMarioDuck
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 526
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70288ba0aa8f7434dbff84b086e8ee4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireMarioClimb
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 526
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2463862ef53a8419c4ccc255c40981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallFireMarioStand
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 509
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d5da5504eea0a49b4994002f3dde6d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallFireMarioWalk1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 509
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3b6afa9526431499d8c53e0de89499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallFireMarioWalk2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 509
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec963ab7de60c446b49a27062141f37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallFireMarioWalk3
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 509
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffd1644abf8c4749a28b0e21bd0feaa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallFireMarioSkid
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 509
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897226c17f241f04686dd488b1fad14e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallFireMarioJump
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 509
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035ddff5dad34044088c52d16b533d10
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallFireMarioDed
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 509
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c579c3ca324474ebedf93c8ee03113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallFireMarioClimb
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 509
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166c99dd6d94f1042a0ae27586087143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InvincibleMarioStand
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 463
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805e30d01ae45d74e94bfac9bcdef7d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InvincibleMarioWalk1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 463
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544d5400c0be5e54ab6fa4c3715f097e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InvincibleMarioWalk2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 463
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d2dd67ac8f7f64eabf7ce2af673bed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InvincibleMarioWalk3
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 463
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072143a24f9ec1c4b81f88b046dd8103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InvincibleMarioSkid
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 463
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d963b300fea20bd4caf5204ea0b798cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InvincibleMarioJump
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 463
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433bff75341df2c4ebf49be577081996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InvincibleMarioDuck
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 463
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f6b42ad7a99f24e9fa3f063462810c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InvincibleMarioClimb
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 463
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9482a5dcbabcbb24d88dc0ff7b52cad6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallInvincibleMarioStand
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 446
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d98a064ea59634eb201942e64c7de2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallInvincibleMarioWalk1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 446
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c0e33d14161c547992a385b66dbcad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallInvincibleMarioWalk2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 446
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dbefe895d090bb48bec554a3908015f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallInvincibleMarioWalk3
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 446
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da13c3c8b9950aa4d92885449b5f188f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallInvincibleMarioSkid
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 446
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d2fbb961b260147b2b9280a08fa985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallInvincibleMarioJump
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 446
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8d7c426901385449485fb4180975e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallInvincibleMarioDed
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 446
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b5eb343649cb94881744fc060f6f63
       vertices: []
       indices: 
       edges: []

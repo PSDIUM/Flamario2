@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: c8bc2af6ae44ca14ba7e5d0d083645d5
+guid: 8e3860208f127d1469930cb9b4fafe2f
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Cursor
-    21300002: Title
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -42,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -84,83 +82,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Cursor
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 89
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 2, y: -3}
-        - {x: 2, y: -4}
-        - {x: -2, y: -4}
-        - {x: -2, y: -3}
-        - {x: -3, y: -3}
-        - {x: -3, y: -2}
-        - {x: -4, y: -2}
-        - {x: -4, y: 1}
-        - {x: -3, y: 1}
-        - {x: -3, y: 3}
-        - {x: -2, y: 3}
-        - {x: -2, y: 4}
-        - {x: 2, y: 4}
-        - {x: 2, y: 3}
-        - {x: 3, y: 3}
-        - {x: 3, y: 1}
-        - {x: 4, y: 1}
-        - {x: 4, y: -2}
-        - {x: 3, y: -2}
-        - {x: 3, y: -3}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2da8fb9e0f361b84f89c8fbcdb68f1c5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Title
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 104
-        width: 176
-        height: 88
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -87, y: -44}
-        - {x: -87, y: -43}
-        - {x: -88, y: -43}
-        - {x: -88, y: 43}
-        - {x: -87, y: 43}
-        - {x: -87, y: 44}
-        - {x: 87, y: 44}
-        - {x: 87, y: 43}
-        - {x: 88, y: 43}
-        - {x: 88, y: -43}
-        - {x: 87, y: -43}
-        - {x: 87, y: -44}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5c9f4781b6e379429e49192ae3b8e61
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c9e05e0ae9a93c542ab21a5ff1ccddeb
+    spriteID: 1db5f9f2173838147a2e58b19a33946a
     vertices: []
     indices: 
     edges: []
