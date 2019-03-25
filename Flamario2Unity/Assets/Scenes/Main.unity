@@ -3708,7 +3708,7 @@ GameObject:
   - component: {fileID: 120932579}
   m_Layer: 9
   m_Name: Steps4
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19354,7 +19354,7 @@ GameObject:
   - component: {fileID: 727483360}
   m_Layer: 9
   m_Name: Steps1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23248,7 +23248,7 @@ GameObject:
   - component: {fileID: 851070005}
   m_Layer: 9
   m_Name: Steps3
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24459,7 +24459,7 @@ GameObject:
   - component: {fileID: 918771577}
   m_Layer: 9
   m_Name: Steps5
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31631,7 +31631,7 @@ GameObject:
   - component: {fileID: 1214779689}
   m_Layer: 9
   m_Name: Steps2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
