@@ -34365,9 +34365,9 @@ GameObject:
   - component: {fileID: 1307686116}
   - component: {fileID: 1307686119}
   - component: {fileID: 1307686120}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Goomba
-  m_TagString: Untagged
+  m_TagString: Goomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59937,6 +59937,10 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 39271173}
+    - target: {fileID: 1974411147, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}
+      propertyPath: collisionLayer.m_Bits
+      value: 8960
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c66d3a4e11c4dfe8754816ad271bba, type: 3}
 --- !u!1001 &3358244849910716533

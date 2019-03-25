@@ -144,6 +144,9 @@ public class PlayerController : MonoBehaviour {
 					playerState = PlayerStates.IDLE;
                     grounded = true;
 				}
+				if (ray.collider.gameObject.tag.Equals("Goomba")) {
+					Destroy(ray.collider.gameObject);
+				}
 				return;
 			}
             else
