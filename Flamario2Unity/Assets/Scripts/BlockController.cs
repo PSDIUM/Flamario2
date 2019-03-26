@@ -28,7 +28,7 @@ public class BlockController : MonoBehaviour {
             coinCounter--;
             GameController.coinScore++;
         }
-        if (coinCounter == 0)
+        if (coinBlock && coinCounter == 0)
         {
             Instantiate(hitBlock, gameObject.transform.position, Quaternion.identity);
             gameObject.GetComponent<SpriteRenderer>().enabled = false;

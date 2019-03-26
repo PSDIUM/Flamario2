@@ -13,19 +13,14 @@ public class PlayerController : MonoBehaviour {
 	public float jumpSpeed = 15;
 	private float jumpVelocity = 0;
 	private float gravity = 35;
-    private bool grounded;
+    [SerializeField]  private bool grounded;
 	private Vector2 currentDirection;
 
 	//Powers
 	[SerializeField] private GameObject flowerPower;
-    public int powerLevel = 1;
-    private bool canPower = true;
-	private bool hasFlowerPower = false;
+	private bool canPower = true;
+	private bool hasFlowerPower = true;
 	private bool isBig = false;
-    public BoxCollider2D smallBox;
-    public BoxCollider2D largeBox;
-    private float smallRaycast;
-    private float largeRaycast;
 
 	private void Start() {
 		playerState = PlayerStates.IDLE;
@@ -44,8 +39,7 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate() {
 		Powers();
 		Movement();
-        PowerLevel(powerLevel);
-    }
+	}
 
 	private void Powers() {
 		if (Input.GetKeyDown(KeyCode.P) && hasFlowerPower && canPower) {
@@ -96,23 +90,7 @@ public class PlayerController : MonoBehaviour {
 					transform.position += new Vector3(movement * dir.x, 0, 0);
 					SetCollisions(dir, true);
 				}
-
-                /*
-                if (ray.collider.gameObject.tag.Equals("Mushroom"))     //collide with mushroom horizontal
-                {
-                    Destroy(ray.collider.gameObject);
-                    PowerLevel(2);
-                    largeBox.enabled = true;
-                    smallBox.enabled = false;
-                }
-                */
-
-                if (ray.collider.gameObject.tag.Equals("Goomba") || ray.collider.gameObject.tag.Equals("Koopa"))     //collide with enemy horizontal (kill)
-                {
-                    PowerLevel(0);
-                }
-
-                return;
+				return;
 			} else {
 				SetCollisions(dir, false);
 			}
@@ -182,18 +160,7 @@ public class PlayerController : MonoBehaviour {
 				if (ray.collider.gameObject.tag.Equals("Goomba")) {
 					Destroy(ray.collider.gameObject);
 				}
-
-                /*
-                if (ray.collider.gameObject.tag.Equals("Mushroom"))     //collide with mushroom downward
-                {
-                    Destroy(ray.collider.gameObject);
-                    PowerLevel(2);
-                    largeBox.enabled = true;
-                    smallBox.enabled = false;
-                }
-                */
-
-                return;
+				return;
 			}
             else
             {
@@ -242,37 +209,6 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-    private void PowerLevel(int change) {
-        
-if(powerLevel + change > powerLevel)
-        {
-            powerLevel = change;
-            gameObject.GetComponent<Animator>().SetInteger("Power", powerLevel);
-        }
-        if(powerLevel > 1)
-        {
-            isBig = true;
-        }
-        else
-        {
-            isBig = false;
-        }
-
-        if(change == 0)
-        {
-            StartCoroutine(gameController.GetComponent<GameController>().Death());
-        }
-
-        if(powerLevel == 3)
-        {
-            hasFlowerPower = true;
-        }
-        else
-        {
-            hasFlowerPower = false;
-        }
-    }
-
 	private enum PlayerStates {
 		IDLE,
 		WALKING,
@@ -295,20 +231,6 @@ if(powerLevel + change > powerLevel)
         if(other.gameObject.name.Equals("BottomBorder")) {
             StartCoroutine(gameController.GetComponent<GameController>().Death());
         }
-
-        /*
-        if (other.gameObject.name.Equals("Mushroom"))
-        {
-            PowerLevel(2);
-        }
-        if (other.gameObject.name.Equals("FireFlower"))
-        {
-            PowerLevel(3);
-        }
-        if (other.gameObject.name.Equals("Goomba"))
-        {
-            PowerLevel(0);
-        }
-        */
     }
+
 }
