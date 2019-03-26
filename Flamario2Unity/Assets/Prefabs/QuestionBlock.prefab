@@ -120,6 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dc88194bb3f407cafba281c2a8dc92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinBlock: 0
+  coin: {fileID: 3965714972407320974, guid: 9aa3bdc74eab3ff4c9e686bad237acd3, type: 3}
+  hitBlock: {fileID: 468876028196046114, guid: 72b06cad5f4fb9a46bd55d43c357285f, type: 3}
 --- !u!95 &1823373080
 Animator:
   serializedVersion: 3
