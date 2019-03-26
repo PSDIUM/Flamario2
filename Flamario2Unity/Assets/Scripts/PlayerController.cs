@@ -13,12 +13,13 @@ public class PlayerController : MonoBehaviour {
 	public float jumpSpeed = 15;
 	private float jumpVelocity = 0;
 	private float gravity = 35;
-    [SerializeField]  private bool grounded;
+    private bool grounded;
 	private Vector2 currentDirection;
 
 	//Powers
 	[SerializeField] private GameObject flowerPower;
-	private bool canPower = true;
+    public int powerLevel = 1;
+    private bool canPower = true;
 	private bool hasFlowerPower = true;
 	private bool isBig = false;
 
@@ -209,6 +210,27 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+    private void PowerLevel(int change) {
+        if(powerLevel + change > powerLevel)
+        {
+            powerLevel = powerLevel + change;
+            gameObject.GetComponent<Animator>().SetInteger("Power", powerLevel);
+        }
+        if(powerLevel > 1)
+        {
+            isBig = true;
+        }
+        else
+        {
+            isBig = false;
+        }
+
+        if(powerLevel == 0)
+        {
+            StartCoroutine(gameController.GetComponent<GameController>().Death());
+        }
+    }
+
 	private enum PlayerStates {
 		IDLE,
 		WALKING,
@@ -230,6 +252,11 @@ public class PlayerController : MonoBehaviour {
     {
         if(other.gameObject.name.Equals("BottomBorder")) {
             StartCoroutine(gameController.GetComponent<GameController>().Death());
+        }
+
+        if (other.gameObject.tag.Equals("Mushroom"))
+        {
+            PowerLevel(1);
         }
     }
 }
