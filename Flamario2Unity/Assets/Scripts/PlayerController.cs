@@ -21,8 +21,9 @@ public class PlayerController : MonoBehaviour {
 	private bool canPower = true;
 	private bool hasFlowerPower = true;
 	private bool isBig = false;
+    public int powerLevel = 1;
 
-	private void Start() {
+    private void Start() {
 		playerState = PlayerStates.IDLE;
 		currentDirection = Vector2.right;
 		SetCollisions();
@@ -89,7 +90,12 @@ public class PlayerController : MonoBehaviour {
 					float movement = ray.distance - (transform.lossyScale.x / 2);
 					transform.position += new Vector3(movement * dir.x, 0, 0);
 					SetCollisions(dir, true);
-				}
+
+                    if (ray.collider.gameObject.tag.Equals("Goomba") || ray.collider.gameObject.tag.Equals("Koopa"))     //collide with enemy horizontal (kill)
+                    {
+                        PowerLevel(0);
+                    }
+                }
 				return;
 			} else {
 				SetCollisions(dir, false);
@@ -225,6 +231,38 @@ public class PlayerController : MonoBehaviour {
 			this.isColliding = isColliding;
 		}
 	}
+
+    private void PowerLevel(int change)
+    {
+
+        if (powerLevel + change > powerLevel)
+        {
+            powerLevel = change;
+            gameObject.GetComponent<Animator>().SetInteger("Power", powerLevel);
+        }
+        if (powerLevel > 1)
+        {
+            isBig = true;
+        }
+        else
+        {
+            isBig = false;
+        }
+
+        if (change == 0)
+        {
+            StartCoroutine(gameController.GetComponent<GameController>().Death());
+        }
+
+        if (powerLevel == 3)
+        {
+            hasFlowerPower = true;
+        }
+        else
+        {
+            hasFlowerPower = false;
+        }
+    }
 
     void OnCollisionEnter2D(Collision2D other)
     {
