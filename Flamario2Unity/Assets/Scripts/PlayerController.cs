@@ -24,8 +24,6 @@ public class PlayerController : MonoBehaviour {
 	private bool isBig = false;
     public BoxCollider2D smallBox;
     public BoxCollider2D largeBox;
-    private float smallRaycast;
-    private float largeRaycast;
 
 	private void Start() {
 		playerState = PlayerStates.IDLE;
