@@ -11,6 +11,8 @@ TagManager:
   - Brick
   - QuestionBlock
   - Goomba
+  - Mushroom
+  - Flower
   layers:
   - Default
   - TransparentFX
@@ -27,7 +29,7 @@ TagManager:
   - Projectile
   - Enemy
   - CameraBorder
-  - 
+  - Powerup
   - 
   - 
   - 
