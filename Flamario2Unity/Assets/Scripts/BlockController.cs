@@ -10,19 +10,31 @@ public class BlockController : MonoBehaviour {
 	private float speed = 0.1f;
     public bool coinBlock = false;
     public GameObject coin;
-    public Vector3 location;
+    private int coinCounter;
+    public GameObject hitBlock;
 
     void Start() {
     	startPos = transform.position;
     	endPos = new Vector2(startPos.x, startPos.y + 0.3f);
-        location = new Vector3(8.5f, 4, 0);
+        if (coinBlock)
+            coinCounter = 4;
     }
 
 	public void HitAnimation() {
 		StartCoroutine(AnimateUp(startPos, endPos, speed));
-        if (coinBlock)
+        if (coinBlock && coinCounter > 0)
+        {
             StartCoroutine(CoinPlay());
-	}
+            coinCounter--;
+            GameController.coinScore++;
+        }
+        if (coinCounter == 0)
+        {
+            Instantiate(hitBlock, gameObject.transform.position, Quaternion.identity);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
+    }
 
 	private IEnumerator AnimateUp(Vector2 startPos, Vector2 endPos, float t) {
 		float elapsedTime = 0;

@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour {
     private Vector3 player1LocalPos = new Vector3(-315, -152); // Worldspace (-2.8F, 4.2F, -0.3F)
     private Vector3 player2LocalPos = new Vector3(-315, -232); // Worldspace (-2.8F, 3.2F, -0.3F)
     private IEnumerator timer;
+    public static int coinScore;
+    private bool scoreCalculated = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,7 @@ public class GameController : MonoBehaviour {
         PlayerPrefs.SetInt("Lives", 3);
         livesText.text = "" + PlayerPrefs.GetInt("Lives");
         timeNumValue = 400;
-        timer = Timer();
+        timer = Timer(); 
     }
 
     // Update is called once per frame
@@ -50,6 +52,12 @@ public class GameController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             QuitGame();
         }
+
+        if (coinScore < 10)
+            coinsText.SetText("0" + coinScore);
+        else
+            coinsText.SetText(""+coinScore);
+
     }
 
     public IEnumerator StartGame() {
@@ -103,6 +111,20 @@ public class GameController : MonoBehaviour {
             yield return null;
         }
         yield return new WaitForSeconds(2);
+        StartCoroutine(AddCoinsScore());
+    }
+
+    public IEnumerator AddCoinsScore()
+    {
+        while (coinScore > 0)
+        {
+            //coinsText.text = "" + coinScore;
+            coinScore--;
+            scoreValue += 50;
+            scoreText.text = "Mario\n" + scoreValue.ToString("000000");
+            yield return null;
+        }
+        yield return new WaitForSeconds(3);
         blackCoverPanel.SetActive(true);
         yield return new WaitForSeconds(1);
         PlayerPrefs.SetFloat("TopScore", scoreValue);
@@ -127,6 +149,7 @@ public class GameController : MonoBehaviour {
             StartCoroutine(timer);
             levelPanel.SetActive(false);
             PlayerPrefs.SetInt("InMenu", 0);
+            coinScore = 0;
         } else if(PlayerPrefs.GetInt("Lives") == 0) {
             gameoverPanel.SetActive(true);
             yield return new WaitForSeconds(2);
@@ -135,6 +158,7 @@ public class GameController : MonoBehaviour {
             SceneManager.LoadScene(0);
         }
     }
+
 
     public void SetCursorState(CursorLockMode wantedMode) {
         Cursor.lockState = wantedMode;

@@ -29,17 +29,17 @@ PrefabInstance:
     - target: {fileID: 7309509154785759160, guid: 6d6dfda82ec7494478ef2d70cf5d3ef2,
         type: 3}
       propertyPath: m_Name
-      value: Brick
+      value: CoinBrick
       objectReference: {fileID: 0}
     - target: {fileID: 7309509154785759167, guid: 6d6dfda82ec7494478ef2d70cf5d3ef2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7309509154785759167, guid: 6d6dfda82ec7494478ef2d70cf5d3ef2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7309509154785759167, guid: 6d6dfda82ec7494478ef2d70cf5d3ef2,
         type: 3}
@@ -91,6 +91,12 @@ PrefabInstance:
       propertyPath: coin
       value: 
       objectReference: {fileID: 3965714972407320974, guid: 9aa3bdc74eab3ff4c9e686bad237acd3,
+        type: 3}
+    - target: {fileID: 4917638419892361747, guid: 6d6dfda82ec7494478ef2d70cf5d3ef2,
+        type: 3}
+      propertyPath: hitBlock
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fee052e231f0d8488f19019f1d5c82b,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d6dfda82ec7494478ef2d70cf5d3ef2, type: 3}
