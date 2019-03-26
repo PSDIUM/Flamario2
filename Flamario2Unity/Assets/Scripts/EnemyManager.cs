@@ -21,7 +21,7 @@ public class EnemyManager : MonoBehaviour
     {
         //At the moment Koopa is spawned in the section where mario is, after 
         //Mario steps forward a little
-        if (marioTransform.position.x > 2 && koopaActivated == false)
+        if (marioTransform.position.x > 70 && koopaActivated == false)
         {
             koopaActivated = true;
             koopa.SetActive(true);
