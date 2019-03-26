@@ -97,6 +97,7 @@ public class PlayerController : MonoBehaviour {
 					SetCollisions(dir, true);
 				}
 
+                /*
                 if (ray.collider.gameObject.tag.Equals("Mushroom"))     //collide with mushroom horizontal
                 {
                     Destroy(ray.collider.gameObject);
@@ -104,6 +105,7 @@ public class PlayerController : MonoBehaviour {
                     largeBox.enabled = true;
                     smallBox.enabled = false;
                 }
+                */
 
                 if (ray.collider.gameObject.tag.Equals("Goomba") || ray.collider.gameObject.tag.Equals("Koopa"))     //collide with enemy horizontal (kill)
                 {
@@ -181,6 +183,7 @@ public class PlayerController : MonoBehaviour {
 					Destroy(ray.collider.gameObject);
 				}
 
+                /*
                 if (ray.collider.gameObject.tag.Equals("Mushroom"))     //collide with mushroom downward
                 {
                     Destroy(ray.collider.gameObject);
@@ -188,6 +191,7 @@ public class PlayerController : MonoBehaviour {
                     largeBox.enabled = true;
                     smallBox.enabled = false;
                 }
+                */
 
                 return;
 			}
@@ -239,7 +243,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
     private void PowerLevel(int change) {
-        if(powerLevel + change > powerLevel)
+        
+if(powerLevel + change > powerLevel)
         {
             powerLevel = change;
             gameObject.GetComponent<Animator>().SetInteger("Power", powerLevel);
@@ -253,7 +258,7 @@ public class PlayerController : MonoBehaviour {
             isBig = false;
         }
 
-        if(powerLevel == 0)
+        if(change == 0)
         {
             StartCoroutine(gameController.GetComponent<GameController>().Death());
         }
