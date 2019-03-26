@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour {
 	private bool isBig = false;
     public BoxCollider2D smallBox;
     public BoxCollider2D largeBox;
+    private float smallRaycast;
+    private float largeRaycast;
 
 	private void Start() {
 		playerState = PlayerStates.IDLE;
@@ -101,6 +103,11 @@ public class PlayerController : MonoBehaviour {
                     PowerLevel(2);
                     largeBox.enabled = true;
                     smallBox.enabled = false;
+                }
+
+                if (ray.collider.gameObject.tag.Equals("Goomba") || ray.collider.gameObject.tag.Equals("Koopa"))     //collide with enemy horizontal (kill)
+                {
+                    PowerLevel(0);
                 }
 
                 return;
