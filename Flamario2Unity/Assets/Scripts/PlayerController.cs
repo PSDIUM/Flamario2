@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour {
     private bool canPower = true;
 	private bool hasFlowerPower = false;
 	private bool isBig = false;
+    public BoxCollider2D smallBox;
+    public BoxCollider2D largeBox;
 
 	private void Start() {
 		playerState = PlayerStates.IDLE;
@@ -92,7 +94,16 @@ public class PlayerController : MonoBehaviour {
 					transform.position += new Vector3(movement * dir.x, 0, 0);
 					SetCollisions(dir, true);
 				}
-				return;
+
+                if (ray.collider.gameObject.tag.Equals("Mushroom"))     //collide with mushroom horizontal
+                {
+                    Destroy(ray.collider.gameObject);
+                    PowerLevel(2);
+                    largeBox.enabled = true;
+                    smallBox.enabled = false;
+                }
+
+                return;
 			} else {
 				SetCollisions(dir, false);
 			}
@@ -162,7 +173,16 @@ public class PlayerController : MonoBehaviour {
 				if (ray.collider.gameObject.tag.Equals("Goomba")) {
 					Destroy(ray.collider.gameObject);
 				}
-				return;
+
+                if (ray.collider.gameObject.tag.Equals("Mushroom"))     //collide with mushroom downward
+                {
+                    Destroy(ray.collider.gameObject);
+                    PowerLevel(2);
+                    largeBox.enabled = true;
+                    smallBox.enabled = false;
+                }
+
+                return;
 			}
             else
             {
@@ -264,6 +284,7 @@ public class PlayerController : MonoBehaviour {
             StartCoroutine(gameController.GetComponent<GameController>().Death());
         }
 
+        /*
         if (other.gameObject.name.Equals("Mushroom"))
         {
             PowerLevel(2);
@@ -276,5 +297,6 @@ public class PlayerController : MonoBehaviour {
         {
             PowerLevel(0);
         }
+        */
     }
 }

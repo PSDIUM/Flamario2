@@ -12,6 +12,7 @@ TagManager:
   - QuestionBlock
   - Goomba
   - Mushroom
+  - Flower
   layers:
   - Default
   - TransparentFX
