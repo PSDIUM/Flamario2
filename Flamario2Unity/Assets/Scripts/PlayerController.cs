@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] private GameObject flowerPower;
     public int powerLevel = 1;
     private bool canPower = true;
-	private bool hasFlowerPower = true;
+	private bool hasFlowerPower = false;
 	private bool isBig = false;
 
 	private void Start() {
@@ -40,7 +40,8 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate() {
 		Powers();
 		Movement();
-	}
+        PowerLevel(powerLevel);
+    }
 
 	private void Powers() {
 		if (Input.GetKeyDown(KeyCode.P) && hasFlowerPower && canPower) {
@@ -213,7 +214,7 @@ public class PlayerController : MonoBehaviour {
     private void PowerLevel(int change) {
         if(powerLevel + change > powerLevel)
         {
-            powerLevel = powerLevel + change;
+            powerLevel = change;
             gameObject.GetComponent<Animator>().SetInteger("Power", powerLevel);
         }
         if(powerLevel > 1)
@@ -228,6 +229,15 @@ public class PlayerController : MonoBehaviour {
         if(powerLevel == 0)
         {
             StartCoroutine(gameController.GetComponent<GameController>().Death());
+        }
+
+        if(powerLevel == 3)
+        {
+            hasFlowerPower = true;
+        }
+        else
+        {
+            hasFlowerPower = false;
         }
     }
 
@@ -254,9 +264,17 @@ public class PlayerController : MonoBehaviour {
             StartCoroutine(gameController.GetComponent<GameController>().Death());
         }
 
-        if (other.gameObject.tag.Equals("Mushroom"))
+        if (other.gameObject.name.Equals("Mushroom"))
         {
-            PowerLevel(1);
+            PowerLevel(2);
+        }
+        if (other.gameObject.name.Equals("FireFlower"))
+        {
+            PowerLevel(3);
+        }
+        if (other.gameObject.name.Equals("Goomba"))
+        {
+            PowerLevel(0);
         }
     }
 }
